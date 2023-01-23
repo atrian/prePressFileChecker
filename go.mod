@@ -1,4 +1,4 @@
-module prePressFilesChecker
+module github.com/atrian/prePressFileChecker
 
 go 1.19
 

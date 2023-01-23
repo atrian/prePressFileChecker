@@ -1,12 +1,27 @@
+// Package checker проверяет ресурсы (линкованные картинки) перед автоматической сборкой печатного
+// прайс-листа.
+// Берет все строки из excel начинающиеся на <Pict>
+// пример: <Pict>D:\WORK\TRADE LOCK\Прайс_2023\Фото в прайс\45907_01
+// Извлекает имя файла 45907_01, добавляет расширение и проверяет файл на существование в указанной папке.
+// Путь собирается из: image_folder_path / 45907_01 . image_extension
+//
+// В конфигурации (config.yaml) задается:
+// путь к файлу с данными
+// excel_file_path: C:\dev\excel\Прайс_ТЛ_FINAL_LIZA.xlsx
+// путь к папке с фотографиями для вставки в прайс
+// image_folder_path: C:\dev\image
+// расширение файлов с фотографиями
+// image_extension: jpg
 package checker
 
 import (
 	"fmt"
-	"prePressFilesChecker/internal/config"
-	"prePressFilesChecker/internal/fileChecker"
-	"prePressFilesChecker/internal/xmlReader"
-	"prePressFilesChecker/internal/zipReader"
-	"prePressFilesChecker/pkg/logger"
+
+	"github.com/atrian/prePressFileChecker/internal/config"
+	"github.com/atrian/prePressFileChecker/internal/fileChecker"
+	"github.com/atrian/prePressFileChecker/internal/xmlReader"
+	"github.com/atrian/prePressFileChecker/internal/zipReader"
+	"github.com/atrian/prePressFileChecker/pkg/logger"
 )
 
 type App struct {
@@ -65,5 +80,5 @@ func (a *App) Run() {
 	fmt.Println("Pics found in EXCEL:", len(pictures))
 	fmt.Println("Pics found in DIR:", len(fch.FilesExist))
 	fmt.Println("Pics NOT found in DIR:", len(fch.FilesNotExist))
-
+	fmt.Println("easservice@gmail.com for any questions")
 }

@@ -6,7 +6,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"prePressFilesChecker/pkg/logger"
+	"github.com/atrian/prePressFileChecker/pkg/logger"
 )
 
 type AppConfig struct {

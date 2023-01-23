@@ -1,6 +1,6 @@
 package main
 
-import "prePressFilesChecker/internal/checker"
+import "github.com/atrian/prePressFileChecker/internal/checker"
 
 func main() {
 	app := checker.New()
