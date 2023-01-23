@@ -80,5 +80,6 @@ func (a *App) Run() {
 	fmt.Println("Pics found in EXCEL:", len(pictures))
 	fmt.Println("Pics found in DIR:", len(fch.FilesExist))
 	fmt.Println("Pics NOT found in DIR:", len(fch.FilesNotExist))
+	fmt.Println("https://github.com/atrian/prePressFileChecker")
 	fmt.Println("easservice@gmail.com for any questions")
 }
